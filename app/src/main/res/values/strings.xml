@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Storage Cleaner</string>
+    <string name="app_desc">Save space on your mobile phone!</string>
+
+    <string name="action_clean">Clean up Space!</string>
+    <string name="action_uninstall">Press the \'Uninstall\' button to free up some space.</string>
+</resources>
