@@ -1,10 +1,12 @@
-package com.james.cleaner;
+package com.james.cleaner.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.james.cleaner.R;
 
 public class MainActivity extends AppCompatActivity {
 

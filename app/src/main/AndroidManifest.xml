@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.Splash">
 
             <intent-filter>
@@ -19,7 +19,7 @@
 
         </activity>
 
-        <activity android:name=".CleanerActivity"/>
+        <activity android:name=".activities.CleanerActivity" />
 
     </application>
 
