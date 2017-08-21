@@ -15,6 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
@@ -31,6 +32,7 @@ public class AppIconView extends View {
     private float fgScale = 0, bgScale = 0;
 
     private Path path;
+    private ValueAnimator animator;
 
     public AppIconView(Context context) {
         this(context, null);
@@ -72,6 +74,46 @@ public class AppIconView extends View {
             }
         });
         animator.start();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                if (animator != null && animator.isStarted())
+                    animator.cancel();
+
+                animator = ValueAnimator.ofFloat(fgScale, 1);
+                animator.setInterpolator(new DecelerateInterpolator());
+                animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                        fgScale = (float) valueAnimator.getAnimatedValue();
+                        bgScale = ((fgScale - 0.8f) / 2) + 0.8f;
+                        invalidate();
+                    }
+                });
+                animator.start();
+                break;
+            case MotionEvent.ACTION_UP:
+                if (animator != null && animator.isStarted())
+                    animator.cancel();
+
+                animator = ValueAnimator.ofFloat(fgScale, 0.8f);
+                animator.setInterpolator(new DecelerateInterpolator());
+                animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                        fgScale = (float) valueAnimator.getAnimatedValue();
+                        bgScale = ((fgScale - 0.8f) / 2) + 0.8f;
+                        invalidate();
+                    }
+                });
+                animator.start();
+                break;
+        }
+        return true;
     }
 
     private Bitmap getRoundBitmap(@DrawableRes int drawable, int size) {
