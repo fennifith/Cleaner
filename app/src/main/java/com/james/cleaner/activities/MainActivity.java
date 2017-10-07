@@ -3,13 +3,16 @@ package com.james.cleaner.activities;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
+import android.text.Html;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.james.cleaner.R;
@@ -54,6 +57,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://txt.fyi/+/6599fc72/")));
+            }
+        });
+
+        TextView donate = findViewById(R.id.donate);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            donate.setText(Html.fromHtml(getString(R.string.action_donate), 0));
+        else donate.setText(Html.fromHtml(getString(R.string.action_donate)));
+        donate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=james.donate")));
             }
         });
     }

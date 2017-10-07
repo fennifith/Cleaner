@@ -4,4 +4,5 @@
 
     <string name="action_clean">Clean up Space!!!1</string>
     <string name="action_uninstall">Press the \'Uninstall\' button to free up some space.</string>
+    <string name="action_donate"><![CDATA[Also, don\'t forget to <a href=\"//\">waste your money</a>!]]></string>
 </resources>
