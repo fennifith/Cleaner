@@ -1,5 +1,4 @@
-# Storage Cleaner
-The only storage saving app that actually works! :D
+Storage Cleaner is the only space saving app that actually does its job! :D
 
 Okay yeah, it's a joke. It uninstalls itself. It still works though.
 
