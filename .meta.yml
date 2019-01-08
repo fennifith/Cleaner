@@ -1,0 +1,5 @@
+icon: "app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png"
+screenshots:
+  - ".github/images/clean.png"
+  - ".github/images/info.png"
+  - ".github/images/uninstall.png"
