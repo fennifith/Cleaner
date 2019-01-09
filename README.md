@@ -8,7 +8,7 @@ Okay yeah, it's a joke. It uninstalls itself. It still works though.
 
 | Clean Up Space | The Info Button | Uninstall Useless Apps |
 |----------------|-----------------|------------------------|
-| ![img](./.github/images/clean.png) | ![img](./.github/images/info.png) | ![img](./.github/images/uninstall.png) |
+| ![img](./.github/images/clean.png?raw=true) | ![img](./.github/images/info.png?raw=true) | ![img](./.github/images/uninstall.png?raw=true) |
 
 ## What is the point?
 
