@@ -2,7 +2,7 @@ Storage Cleaner is the only space saving app that actually does its job! :D
 
 Okay yeah, it's a joke. It uninstalls itself. It still works though.
 
-[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/wDDPK22)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.jfenn.me/)
 
 ## Screenshots
 
